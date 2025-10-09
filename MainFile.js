@@ -10,6 +10,9 @@ const rl = readline.createInterface({
     output: process.stdout
 }); 
 
-rl.question('Welcome to CalmLine what are you stressed about?'), (UserResponse) => { 
-    console.log('You are being s)
-}
+rl.question('Welcome to CalmLine what are you stressed about?', (UserResponse) => { 
+    console.log(`You are being stressed from ${UserResponse}`); 
+    rl.close(); // close the interface here 
+});  
+
+// create a function to 
