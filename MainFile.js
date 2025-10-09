@@ -16,16 +16,24 @@ let userResponse;
 
 rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) => {  
     userResponse = userresponse;  
-    //TODO: Handle error here  
-    
+    //TODO: Handle error here   
+    if (!userResponse) { 
+        console.log('You did not enter anything'); 
+    }
     console.log(`You are being stressed from ${userresponse}`); 
     rl.close(); // close the interface here 
 });   
 
 let userLevel; // should be undefined here for now. 
 // ask another question here about user stress level based of a number.
-rl.question('What are you stress Levels from a scale of 1 - 10?', (userLevels))
-
+rl.question('What are you stress Levels from a scale of 1 - 10?', (userstresslevels) => { 
+    userlevel = userstresslevels;  
+    //TODO: Work on the responses  
+    if (!userlevel) { 
+        console.log('Nothing responded'); 
+    } 
+    
+}
 // create a function to take that user input. 
 function StressLevel() { 
     // handle some try and catch to check if user Responsed or not.  
