@@ -10,9 +10,13 @@ const rl = readline.createInterface({
     output: process.stdout
 }); 
 
-rl.question('Welcome to CalmLine what are you stressed about?', (UserResponse) => { 
-    console.log(`You are being stressed from ${UserResponse}`); 
+//global variable here 
+let userResponse; 
+
+rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) => {  
+    userResponse = userresponse; 
+    console.log(`You are being stressed from ${userresponse}`); 
     rl.close(); // close the interface here 
 });  
 
-// create a function to 
+// create a function to take that user input. 
