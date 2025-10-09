@@ -15,7 +15,9 @@ const rl = readline.createInterface({
 let userResponse; 
 
 rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) => {  
-    userResponse = userresponse; 
+    userResponse = userresponse;  
+    //TODO: Handle error here  
+    
     console.log(`You are being stressed from ${userresponse}`); 
     rl.close(); // close the interface here 
 });   
@@ -28,7 +30,7 @@ rl.question('What are you stress Levels from a scale of 1 - 10?', (userLevels))
 function StressLevel() { 
     // handle some try and catch to check if user Responsed or not.  
     try { 
-        if (!userResponse) { 
+        if (!userRe) { 
             console.log("Sorry there was no response from you");
         }
     } catch (error) { 
