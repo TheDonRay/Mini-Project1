@@ -2,7 +2,8 @@
 
 /*Goal for this project is to create something fun using CLI and what I've learned from JS function fundamentals etc */ 
 
-// TODO: Figure out how to get user input from terminal line in Javascript 
+// TODO: Figure out how to get user input from terminal line in Javascript  
+// this is the initialization of the readline here 
 const readline = require('readline'); 
 
 const rl = readline.createInterface({
@@ -17,6 +18,19 @@ rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) =
     userResponse = userresponse; 
     console.log(`You are being stressed from ${userresponse}`); 
     rl.close(); // close the interface here 
-});  
+});   
+
+// ask another question here about user stress level based of a number.
+rl.question
 
 // create a function to take that user input. 
+function StressLevel() { 
+    // handle some try and catch to check if user Responsed or not.  
+    try { 
+        if (!userResponse) { 
+            console.log("Sorry there was no response from you");
+        }
+    } catch (error) { 
+        console.error(error); 
+    }
+}
