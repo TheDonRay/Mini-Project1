@@ -20,8 +20,9 @@ rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) =
     rl.close(); // close the interface here 
 });   
 
+let userLevel; // should be undefined here for now. 
 // ask another question here about user stress level based of a number.
-rl.question
+rl.question('What are you stress Levels from a scale of 1 - 10?', (userLevels))
 
 // create a function to take that user input. 
 function StressLevel() { 
