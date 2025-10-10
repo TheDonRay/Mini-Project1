@@ -12,35 +12,37 @@ const rl = readline.createInterface({
 }); 
 
 //global variable here 
-let userResponse; 
+async function readlineUser() {
 
 rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) => {  
     userResponse = userresponse;  
     //TODO: Handle error here   
     if (!userResponse) { 
-        console.log('You did not enter anything'); 
+        console.log('You did not enter anything');  
+        rl.close();
     }
     console.log(`You are being stressed from ${userresponse}`); 
-    rl.close(); // close the interface here 
-});   
 
-//TODO: ask another question here about user stress level based of a number. 
+    //TODO: ask another question here about user stress level based of a number.
+    rl.question('On a scale of 1-10 how stressed are you?', (userRate) => {
+        const stressLevels = Number(userRate); 
 
+        if (isNaN(stresslevels) || stressLevels < 1){ 
+            console.log('Invalid number please enter a number'); 
+        } else { 
+            // Todo call the function here  
+            StessLevel(stresslevels)
+        } 
+        rl.close(); 
+    }); 
+});  
 
+}
+  
 
-let userLevel; // should be undefined here for now. 
-
-function StressLevel() { 
+function StressLevel(userStressLevels) { 
     // handle some try and catch to check if user Responsed or not.  
-    try { 
-        if (Number.isInteger(userlevel) > 5) { 
-            console.log('Seems you are very stressed go outside and take a walk!'); 
-        } else if (!Number.isInteger(userlevel)){ 
-            console.log('Error not a valid number');
-        }
-    } catch (error) { 
-        console.error(error); 
-    }
+    
 } 
-// invoke function 
+// function is already called in the read line function 
 StressLevel(); 
