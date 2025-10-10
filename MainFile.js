@@ -40,8 +40,6 @@ async function readlineUser() {
   );
 }
 
-const Calmline = await readlineUser();
-// dont need to invoke the function because the function is already called in the readline functions
 function StressLevel(userStressLevels) {
   // handle some try and catch to check if user Responsed or not.
   try {
@@ -56,4 +54,9 @@ function StressLevel(userStressLevels) {
     console.error("Invalid Response from user");
   }
 }
-// function is already called in the read line function
+// call the function
+StressLevel();
+
+const Calmline = await readlineUser();
+// dont need to invoke the function because the function is already called in the readline functions
+console.log(Calmline);
