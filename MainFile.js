@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 });
 
 //global variable here
-async function readlineUser() {
+function readlineUser() {
   rl.question(
     "Welcome to CalmLine what are you stressed about?",
     (userresponse) => {
@@ -32,7 +32,7 @@ async function readlineUser() {
           console.log("Invalid number please enter a number");
         } else {
           // Todo call the function here
-          StessLevel(stresslevels);
+          StressLevel(stresslevels);
         }
         rl.close();
       });
@@ -57,6 +57,6 @@ function StressLevel(userStressLevels) {
 // call the function
 StressLevel();
 
-const Calmline = await readlineUser();
+const resultOfProgram = readlineUser();  
 // dont need to invoke the function because the function is already called in the readline functions
-console.log(Calmline);
+console.log(resultOfProgram);
