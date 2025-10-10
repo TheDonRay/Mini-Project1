@@ -24,24 +24,23 @@ rl.question('Welcome to CalmLine what are you stressed about?', (userresponse) =
     rl.close(); // close the interface here 
 });   
 
+//TODO: ask another question here about user stress level based of a number. 
+
+
+
 let userLevel; // should be undefined here for now. 
-// ask another question here about user stress level based of a number.
-rl.question('What are you stress Levels from a scale of 1 - 10?', (userstresslevels) => { 
-    userlevel = userstresslevels;  
-    //TODO: Work on the responses  
-    if (!userlevel) { 
-        console.log('Nothing responded'); 
-    } 
-    
-}
-// create a function to take that user input. 
+
 function StressLevel() { 
     // handle some try and catch to check if user Responsed or not.  
     try { 
-        if (!userRe) { 
-            console.log("Sorry there was no response from you");
+        if (Number.isInteger(userlevel) > 5) { 
+            console.log('Seems you are very stressed go outside and take a walk!'); 
+        } else if (!Number.isInteger(userlevel)){ 
+            console.log('Error not a valid number');
         }
     } catch (error) { 
         console.error(error); 
     }
-}
+} 
+// invoke function 
+StressLevel(); 
