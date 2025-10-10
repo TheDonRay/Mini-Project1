@@ -1,4 +1,12 @@
 {
+  "name": "calmline-cli",
+  "version": "1.0.0",
+  "description": "A mini CLI project to help users talk about their stress levels.",
+  "main": "MainFile.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node MainFile.js"
+  },
   "devDependencies": {
     "prettier": "3.6.2"
   }
