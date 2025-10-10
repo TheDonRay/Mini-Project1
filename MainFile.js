@@ -41,14 +41,19 @@ async function readlineUser() {
 }
 
 const Calmline = await readlineUser();
-// dont need to invoke the function because the function is already called in the readline functions 
+// dont need to invoke the function because the function is already called in the readline functions
 function StressLevel(userStressLevels) {
-  // handle some try and catch to check if user Responsed or not. 
-  try { 
-    if (userStressLevels < 5) { 
-        console.log("Seems like you're not that stressed ")
+  // handle some try and catch to check if user Responsed or not.
+  try {
+    if (userStressLevels < 5) {
+      console.log("Seems like you're not that stressed ");
+    } else if (userStressLevels > 5) {
+      console.log(
+        "Seems like you're very stressed take a walk outside and breathe some fresh air !!",
+      );
     }
+  } catch (error) {
+    console.error("Invalid Response from user");
   }
 }
 // function is already called in the read line function
-
